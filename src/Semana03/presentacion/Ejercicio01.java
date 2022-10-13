@@ -1,7 +1,7 @@
-package presentacion;
+package Semana03.presentacion;
 
 import java.util.Scanner;
-import entidades.Trabajador;
+import Semana03.entidades.Trabajador;
 
 /**
  * Ejercicio de la clase trabajador

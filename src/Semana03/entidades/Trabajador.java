@@ -1,4 +1,4 @@
-package entidades;
+package Semana03.entidades;
 
 /**
  * Clase que referencia a un trabajador
