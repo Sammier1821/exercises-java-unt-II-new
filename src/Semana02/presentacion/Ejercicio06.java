@@ -34,36 +34,41 @@ public class Ejercicio06 {
   }  
 
   public static void main(String[] args) {
-    int number, nextNumber, count = 0, minimum = 0, maximum = 0;
-    float average = 0;
+    int number, nextNumber, count, minimum, maximum;
+    float average;
     do {
-      System.out.print("Enter a number: ");
-      number = sc.nextInt();
-    } while (number < 0);
-    if (number != 0){
-      count++;
-      average += number;
-      minimum = maximum = number;
+      count = minimum = maximum = 0;
+      average = 0; 
       do {
+        System.out.print("Enter a number: ");
+        number = sc.nextInt();
+      } while (number < 0);
+      if (number != 0){
+        count++;
+        average += number;
+        minimum = maximum = number;
         do {
-          System.out.print("Enter another number: ");
-          nextNumber = sc.nextInt();
-        } while (nextNumber < 0);
-        if (nextNumber != 0) {
-          count++;
-          if (minimum >= nextNumber)
-            minimum = minimum(number, nextNumber);
-          if (maximum <= nextNumber)
-            maximum = maximum(number, nextNumber);
-          average += nextNumber;
-          number = nextNumber;
-        }
-      } while (nextNumber != 0);
-    }
-    average /= (float) count;
-    System.out.print("\nMinimum number: " + minimum);
-    System.out.print("\nMaximum number: " + maximum);
-    System.out.print("\nAverage number: " + average); 
-    System.out.println();
+          do {
+            System.out.print("Enter another number: ");
+            nextNumber = sc.nextInt();
+          } while (nextNumber < 0);
+          if (nextNumber != 0) {
+            count++;
+            if (minimum >= nextNumber)
+              minimum = minimum(number, nextNumber);
+            if (maximum <= nextNumber)
+              maximum = maximum(number, nextNumber);
+            average += nextNumber;
+            number = nextNumber;
+          }
+        } while (nextNumber != 0);
+      }
+      sc.nextLine();
+      average /= (float) count;
+      System.out.print("\nMinimum number: " + minimum);
+      System.out.print("\nMaximum number: " + maximum);
+      System.out.print("\nAverage number: " + average); 
+      System.out.println();
+    } while (control("\nDo you want to restart the app?"));
   }
 }
