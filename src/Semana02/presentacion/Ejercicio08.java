@@ -40,6 +40,6 @@ public class Ejercicio08 {
       sc.nextLine();
       factorial = factorial(number);
       System.out.println("The factorial of " + number + " is " + factorial);
-    } while (control("Do you want to restart the app?"));
+    } while (control("\nDo you want to restart the app?"));
   }
 }
