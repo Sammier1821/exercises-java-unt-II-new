@@ -29,12 +29,19 @@ public class Ejercicio09 {
   }
   
   public static int lcm(int a, int b) {
-    int factor = 0;
-    int max = maximum(a, b);
-    for (int i = 1; i < max; i++)
-      if ((a % i == 0) && (b % i == 0))
-        factor = i;
-    return factor;
+    int lcm = 1, i = 1;
+    do {
+      i++;
+      if (a % i == 0 || b % i == 0){
+        if (a % i == 0)
+          a /= i;
+        if (b % i == 0)
+          b /= i;
+        lcm *= i;
+        i--;
+      }
+    } while (a != 1 || b != 1);
+    return lcm;
   }
   
   public static void title(String phrase) {
