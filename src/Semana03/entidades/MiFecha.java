@@ -5,7 +5,7 @@ package Semana03.entidades;
  * @author Gian Samana
  */
 public class MiFecha {
-  final String Meses[] = {"Enero", "febrero", "marzo", "abril", "mayo", "junio", "julio", "agosto", "septiembre", "octubre", "noviembre", "diciembre"};
+  final String Meses[] = {"enero", "febrero", "marzo", "abril", "mayo", "junio", "julio", "agosto", "septiembre", "octubre", "noviembre", "diciembre"};
   
   private int day;
   private int month;
