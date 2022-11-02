@@ -28,11 +28,14 @@ public class Ejercicio19 {
   }
   
   public static void main(String[] args) {
-    int num = 0, counter = 0, remainder = 0, binary = 0;
+    int num = 0, counter, remainder = 0, binary = 0;
     do {
+      counter = 0;
       title("App to convert a decimal number into a binary");
-      System.out.print("Enter a number: ");
-      num = sc.nextInt();
+      do {
+        System.out.print("Enter a number: ");
+        num = sc.nextInt();  
+      } while (num <= 0);
       sc.nextLine();
       while (num >= 1) {
         remainder = num % 2;
