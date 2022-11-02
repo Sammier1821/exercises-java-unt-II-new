@@ -24,21 +24,18 @@ public class Ejercicio20 {
   }
   
   public static void main(String[] args) {
-    int binary = 0, counter, n, decimal = 0;
+    int binary = 0, counter, n, decimal;
     do {
       counter = 0;
+      decimal = 0;
       title("App to convert a binary number into a decimal one");
       System.out.print("Enter a binary number: ");
       binary = sc.nextInt();
       sc.nextLine();
-      n = binary;
-      while (n != 0) {
-        n /= 10;
-        counter++;
-      }
-      for (int i = 0; i < counter; i++) {
-        decimal += (binary % 10) * Math.pow(2, i);
+      while (binary != 0) {
+        decimal += (binary % 10) * Math.pow(2, counter);
         binary /= 10;
+        counter++;
       }
       System.out.println("The decimal number is: " + decimal);
     } while (control("Do you want to restart the app?"));
