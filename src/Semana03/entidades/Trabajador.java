@@ -58,6 +58,9 @@ public class Trabajador {
   }
   
   public String toString() {
-    return nombre + " " + salarioPorHora + " " + nHorasLaboradas;
+    return getNombre() + " ========== " + 
+            getSalarioPorHora() + " ========== " + 
+            getNHorasLaboradas() + " ========== " +
+            getSueldoNeto();
   }
 }
