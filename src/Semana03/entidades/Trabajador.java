@@ -8,33 +8,39 @@ public class Trabajador {
   private String nombre;
   private float salarioPorHora;
   private int nHorasLaboradas;
+
+  public Trabajador() {
+    this.nombre = "NN";
+    this.salarioPorHora = 0;
+    this.nHorasLaboradas = 0;
+  }
   
   public Trabajador(String nombre, float salarioPorHora, int nHorasLaboradas) {
     this.nombre = nombre;
     this.salarioPorHora = salarioPorHora;
     this.nHorasLaboradas = nHorasLaboradas;
   }
-  
+
   public void setNombre(String nombre) {
     this.nombre = nombre;
   }
-  
-  public String getNombre() {
-    return nombre;
-  }
-  
+
   public void setSalarioPorHora(float salarioPorHora) {
     this.salarioPorHora = salarioPorHora;
   }
-  
-  public float getSalarioPorHora() {
-    return salarioPorHora;
-  }
-  
+
   public void setNHorasLaboradas(int nHorasLaboradas) {
     this.nHorasLaboradas = nHorasLaboradas;
   }
-  
+
+  public String getNombre() {
+    return nombre;
+  }
+
+  public float getSalarioPorHora() {
+    return salarioPorHora;
+  }
+
   public int getNHorasLaboradas() {
     return nHorasLaboradas;
   }
