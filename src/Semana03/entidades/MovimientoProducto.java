@@ -5,6 +5,16 @@ public class MovimientoProducto {
   private int quantity;
   private int movementType;
 
+  public MovimientoProducto() {
+    productCode = "noCode";
+  }
+  
+  public MovimientoProducto(String productCode, int quantity, int movementType) {
+    this.productCode = productCode;
+    this.quantity = quantity;
+    this.movementType = movementType;
+  }
+  
   public void setProductCode(String productCode) {
     this.productCode = productCode;
   }
@@ -17,8 +27,9 @@ public class MovimientoProducto {
   }
 
   public void setMovementType(int movementType) {
-    if (movementType == 0 || movementType == 1)
+    if (movementType == 0 || movementType == 1) {
       this.movementType = movementType;
+    }
     else
       System.out.println("El tipo de movimiento es solo 1 (entrada) o 0 (salida)");
   }
